@@ -1,65 +1,89 @@
-Backend Ecommerce Perfumes
-Proyecto desarrollado en la asignatura de Fullstack que consiste en una base para un ecommerce del rubro de perfumes.
 
-Descripción
-En esta primera instancia se trabajó en el backend, logrando estructurar una solución para un cliente del sector de venta de perfumes. El cliente contaba con un sistema monolítico que no daba abasto, por lo que se propuso implementar microservicios.
+```markdown
+# Backend Ecommerce Perfumes
 
-La solución fue desarrollada con Java y Spring Boot, usando MySQL como base de datos y CSS con Bootstrap para diseño básico. Este proyecto base permite comprender y trabajar con un backend full REST, siendo una demostración funcional como punto de partida para futuros desarrollos.
+![Banner del proyecto](ruta/a/la/imagen-del-proyecto.jpg)
 
-Características
-Backend construido con microservicios en Spring Boot.
+---
 
-Comunicación mediante servicios RESTful.
+## Tabla de Contenidos
 
-Gestión de base de datos en MySQL.
+- [Descripción](#descripción)
+- [Características](#características)
+- [Tecnologías](#tecnologías)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Estado del Proyecto](#estado-del-proyecto)
+- [Demostración](#demostración)
+- [Contribuciones](#contribuciones)
+- [Licencia](#licencia)
+- [Contacto](#contacto)
 
-Base para la futura integración con frontend.
+---
 
-Arquitectura modular para escalabilidad y mantenimiento.
+## Descripción
 
-Tecnologías
-Java 11+
+Este proyecto fue desarrollado durante la asignatura de Fullstack y constituye la base de backend para un ecommerce en el rubro de perfumes.
 
-Spring Boot
+El objetivo principal fue reestructurar un sistema monolítico de un cliente que no cumplía con sus necesidades actuales. Para ello, se implementó una arquitectura basada en microservicios con Java y Spring Boot, y se utilizó MySQL como base de datos relacional.
 
-MySQL
+Se aprendieron conceptos y prácticas en la creación de servicios RESTful completos, dejando el proyecto listo para futuras integraciones con frontend o ampliaciones.
 
-Bootstrap (para estilos CSS básicos)
+---
 
-Maven (gestor de dependencias)
+## Características
 
-Instalación
-Para correr el proyecto localmente:
+- Sistema backend basado en microservicios con Spring Boot.
+- API REST para la gestión de productos, usuarios y pedidos.
+- Conexión y persistencia de datos usando MySQL.
+- Diseño modular y escalable para facilitar mantenimiento y crecimiento.
+- Incluye estilos básicos con Bootstrap para facilitar prototipado.
 
-Clonar este repositorio
+---
 
-text
-git clone https://github.com/usuario/proyecto-backend-ecommerce.git
-Configurar base de datos MySQL y actualizar las propiedades en application.properties
+## Tecnologías
 
-Ejecutar con Maven
+- Java 11+
+- Spring Boot
+- MySQL 8+
+- Bootstrap 5
+- Maven (Gestor de dependencias)
 
-text
-mvn spring-boot:run
-El backend estará disponible en http://localhost:8080
+---
 
-Uso
-Se puede consumir el backend mediante peticiones REST para gestionar perfumes, usuarios, pedidos y más.
+## Instalación
 
-Ejemplo de petición GET para obtener lista de perfumes:
+1. Clonar el repositorio
+   ```
+   git clone https://github.com/usuario/proyecto-backend-ecommerce.git
+   ```
+2. Configurar la base de datos MySQL y actualizar el archivo `src/main/resources/application.properties` con las credenciales y URL correspondientes.
+3. Construir y ejecutar el proyecto con Maven:
+   ```
+   mvn clean install
+   mvn spring-boot:run
+   ```
 
-text
-GET http://localhost:8080/api/perfumes
-Estado del Proyecto
-🚧 Proyecto en desarrollo y enfocado en primeros pasos de backend con microservicios.
+4. El backend estará disponible en `http://localhost:8080/home`.
 
-Contribuciones
-Las contribuciones son bienvenidas mediante pull requests y reporte de issues.
+Puedes explorar otros endpoints documentados o utilizar herramientas como Postman para probar el backend.
 
-Screenshots
-<img width="1072" height="713" alt="image" src="https://github.com/user-attachments/assets/187cd0f2-408c-4ff0-bce2-f7edf2c38a58" />
-<img width="1365" height="641" alt="image" src="https://github.com/user-attachments/assets/cb26dcba-e353-4588-a13c-2eebf801bb95" />
-<img width="1349" height="631" alt="image" src="https://github.com/user-attachments/assets/8f891147-e331-443c-9e45-dffa260d3220" />
-<img width="1362" height="634" alt="image" src="https://github.com/user-attachments/assets/75078f76-a93c-4868-8710-a105994cb700" />
-<img width="1365" height="629" alt="image" src="https://github.com/user-attachments/assets/de854a3e-0dd7-43a3-8ba0-53a3fdbac8b7" />
+---
+
+## Estado del Proyecto
+
+🚧 Proyecto en desarrollo inicial. La base funcional del backend está completa, pero quedan pendientes integraciones y mejoras.
+
+---
+
+## Demostración
+
+![Pantalla inicio](https://github.com/user-attachments/assets/187cd0f2-408c-4ff0-bce2-f7edf2c38a58)
+![Pantalla listado](https://github.com/user-attachments/assets/cb26dcba-e353-4588-a13c-2eebf801bb95)
+![Pantalla detalle](https://github.com/user-attachments/assets/8f891147-e331-443c-9e45-dffa260d3220)
+![Pantalla login](https://github.com/user-attachments/assets/75078f76-a93c-4868-8710-a105994cb700)
+![Pantalla perfil](https://github.com/user-attachments/assets/de854a3e-0dd7-43a3-8ba0-53a3fdbac8b7)
+
+---
+```
 
