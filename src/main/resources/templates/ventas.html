@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+
+<head>
+    <title>Lista de Ventas</title>
+</head>
+
+<body>
+<div layout:fragment="content">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">Ventas</h2>
+        <a href="/home" class="btn btn-outline-secondary">← Volver al Home</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle shadow-sm">
+            <thead class="table-light">
+                <tr>
+                    <th>ID</th>
+                    <th>ID Cliente</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                    <th>Método de Pago</th>
+                    <th>Estado</th>
+                    <th>ID Cupón</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="unaVenta : ${Ventitas}">
+                    <td th:text="${unaVenta.id}">1</td>
+                    <td th:text="${unaVenta.clienteId}">101</td>
+                    <td th:text="${unaVenta.fecha}">2025-06-01</td>
+                    <td th:text="${unaVenta.total}">$25.000</td>
+                    <td th:text="${unaVenta.metodoPago}">Crédito</td>
+                    <td th:text="${unaVenta.estado}">Confirmada</td>
+                    <td th:text="${unaVenta.cuponId}">5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

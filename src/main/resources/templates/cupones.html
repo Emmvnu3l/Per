@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Lista de Cupones</title>
+</head>
+<body>
+<div layout:fragment="content">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">Cupones</h2>
+        <a href="/home" class="btn btn-outline-secondary">← Volver al Home</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle shadow-sm">
+            <thead class="table-light">
+                <tr>
+                    <th>Id</th>
+                    <th>Código</th>
+                    <th>Descuento (%)</th>
+                    <th>Fecha Creación</th>
+                    <th>Fecha Término</th>
+                    <th>Activo</th>
+                    <th>Cantidad de Usos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="unCupon : ${Cuponcitos}">
+                    <td th:text="${unCupon.id}">1</td>
+                    <td th:text="${unCupon.codigo}">VERANO10</td>
+                    <td th:text="${unCupon.descuento}">10</td>
+                    <td th:text="${unCupon.fechaInicio}">2025-06-01</td>
+                    <td th:text="${unCupon.fechaExpiracion}">2025-06-30</td>
+                    <td>
+                        <span th:text="${unCupon.activo} ? 'Sí' : 'No'"
+                              th:classappend="${unCupon.activo} ? 'text-success' : 'text-danger'">Sí</span>
+                    </td>
+                    <td th:text="${unCupon.usosDisponibles}">100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

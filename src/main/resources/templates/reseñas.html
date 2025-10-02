@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+
+<head>
+    <title>Lista de Reseñas</title>
+</head>
+
+<body>
+<div layout:fragment="content">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">Reseñas</h2>
+        <a href="/home" class="btn btn-outline-secondary">← Volver al Home</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle shadow-sm">
+            <thead class="table-light">
+                <tr>
+                    <th>ID</th>
+                    <th>ID Producto</th>
+                    <th>ID Cliente</th>
+                    <th>Calificación</th>
+                    <th>Comentario</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="unaResenia : ${Resenias}">
+                    <td th:text="${unaResenia.id}">1</td>
+                    <td th:text="${unaResenia.productoId}">101</td>
+                    <td th:text="${unaResenia.clienteId}">202</td>
+                    <td th:text="${unaResenia.calificacion}">5</td>
+                    <td th:text="${unaResenia.comentario}">Excelente</td>
+                    <td th:text="${unaResenia.fecha}">2025-06-01</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

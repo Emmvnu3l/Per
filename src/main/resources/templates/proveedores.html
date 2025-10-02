@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+
+<head>
+    <title>Lista de Proveedores</title>
+</head>
+
+<body>
+<div layout:fragment="content">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">Proveedores</h2>
+        <a href="/home" class="btn btn-outline-secondary">← Volver al Home</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle shadow-sm">
+            <thead class="table-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>RUT</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>País</th>
+                    <th>Ciudad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="unProveedor : ${provedorsitos}">
+                    <td th:text="${unProveedor.id}">1</td>
+                    <td th:text="${unProveedor.nombre}">Nombre</td>
+                    <td th:text="${unProveedor.rut}">Rut</td>
+                    <td th:text="${unProveedor.correo}">Correo</td>
+                    <td th:text="${unProveedor.telefono}">Teléfono</td>
+                    <td th:text="${unProveedor.direccion}">Dirección</td>
+                    <td th:text="${unProveedor.pais}">País</td>
+                    <td th:text="${unProveedor.ciudad}">Ciudad</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

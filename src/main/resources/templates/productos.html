@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+
+<head>
+    <title>Lista de Productos</title>
+</head>
+
+<body>
+<div layout:fragment="content">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary">Productos</h2>
+        <a href="/home" class="btn btn-outline-secondary">← Volver al Home</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle shadow-sm">
+            <thead class="table-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Marca</th>
+                    <th>Categoría</th>
+                    <th>Género</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th>Fragancia</th>
+                    <th>Mililitros</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="unProducto : ${productitos}">
+                    <td th:text="${unProducto.id}">1</td>
+                    <td th:text="${unProducto.nombre}">Nombre</td>
+                    <td th:text="${unProducto.descripcion}">Descripción</td>
+                    <td th:text="${unProducto.marca}">Marca</td>
+                    <td th:text="${unProducto.categoria}">Categoría</td>
+                    <td th:text="${unProducto.genero}">Género</td>
+                    <td th:text="${unProducto.stock}">Stock</td>
+                    <td th:text="${unProducto.precio}">Precio</td>
+                    <td th:text="${unProducto.fragancia}">Fragancia</td>
+                    <td th:text="${unProducto.mililitros}">ML</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>
