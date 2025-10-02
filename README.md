@@ -62,10 +62,11 @@ Puedes explorar otros endpoints documentados o utilizar herramientas como Postma
 
 ## Demostración
 ```
-https://github.com/user-attachments/assets/187cd0f2-408c-4ff0-bce2-f7edf2c38a58
-https://github.com/user-attachments/assets/cb26dcba-e353-4588-a13c-2eebf801bb95
-https://github.com/user-attachments/assets/8f891147-e331-443c-9e45-dffa260d3220
-https://github.com/user-attachments/assets/75078f76-a93c-4868-8710-a105994cb700
-https://github.com/user-attachments/assets/de854a3e-0dd7-43a3-8ba0-53a3fdbac8b7
+<img width="1348" height="633" alt="image" src="https://github.com/user-attachments/assets/aff2b56e-219b-4a89-b967-848ed7183315" />
+<img width="1365" height="640" alt="image" src="https://github.com/user-attachments/assets/27423cbd-45bc-48ac-96d5-b4e855f565b1" />
+<img width="1349" height="576" alt="image" src="https://github.com/user-attachments/assets/b5ec6fe2-916e-42fc-9ab4-3b6b335e38fa" />
+<img width="1365" height="720" alt="image" src="https://github.com/user-attachments/assets/e7c98e64-d03c-4c7e-8cf8-7d59fb5ca259" />
+![Uploading image.png…]()
+
 
 
